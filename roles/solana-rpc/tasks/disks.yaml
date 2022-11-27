@@ -47,9 +47,12 @@
   shell: mkfs.ext4 /dev/{{ raid_name.stdout }}
   when: raid_name.rc == 0 and mount_mnt.rc != 0
 
-- name: mount disks
+- name: mount disks and write entry in fstab
   become: true
   become_user: root
-  shell: mount /dev/{{ raid_name.stdout }} /mnt
-  when: mount_mnt.rc != 0
-
+  mount:
+    path: /mnt
+    src: /dev/{{ raid_name.stdout }}
+    fstype: ext4
+    state: mounted
+  when: raid_name.rc == 0 and mount_mnt.rc != 0
