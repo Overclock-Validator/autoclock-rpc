@@ -11,4 +11,3 @@
   become: true
   become_user: solana
   shell: python3 /mnt/snapshot-finder.py --snapshot_path /mnt/solana-snapshots --version {{ solana_version }}
-
