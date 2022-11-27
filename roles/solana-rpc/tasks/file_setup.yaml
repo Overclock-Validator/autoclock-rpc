@@ -8,21 +8,11 @@
     group: solana
     mode: "0755"
 
-- name: setup sol.service
-  become: true
-  become_user: root
-  template:
-    src: sol.service
-    dest: /etc/systemd/system/sol.service
-    owner: root
-    group: root
-    mode: "0755"
-
 - name: copy restart.sh
   become: true
   become_user: solana
-  template:
-    src: restart.sh
+  copy:
+    src: files/restart.sh
     dest: /home/solana/restart.sh
     owner: solana
     group: solana
@@ -31,8 +21,8 @@
 - name: copy snapcheck.py
   become: true
   become_user: solana
-  template:
-    src: snapcheck.py
+  copy:
+    src: files/snapcheck.py
     dest: /mnt/snapcheck.py
     owner: solana
     group: solana
@@ -40,8 +30,8 @@
 - name: copy snapshot-finder.py
   become: true
   become_user: solana
-  template:
-    src: snapshot-finder.py
+  copy:
+    src: files/snapshot-finder.py
     dest: /mnt/snapshot-finder.py
     owner: solana
     group: solana
