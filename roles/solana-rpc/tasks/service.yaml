@@ -1,0 +1,16 @@
+- name: setup sol.service
+  become: true
+  become_user: root
+  copy:
+    src: files/sol.service
+    dest: /etc/systemd/system/sol.service
+    owner: root
+    group: root
+    mode: "0755"
+
+- name: Enable service sol
+  become: true
+  become_user: root
+  systemd:
+    name: sol.service
+    enabled: yes

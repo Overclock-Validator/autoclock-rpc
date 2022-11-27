@@ -43,6 +43,9 @@
   include_tasks: snapshot_downloader.yaml
   when: download_snapshot|default(true)|bool == true
 
+- name: solana service
+  include_tasks: service.yaml
+
 - name: restart without waiting
   become: true
   become_user: root
