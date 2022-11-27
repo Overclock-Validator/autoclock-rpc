@@ -1,0 +1,5 @@
+- name: Install/configure Solana RPC
+  hosts: all
+  gather_facts: yes
+  roles:
+     - { role: solana-rpc }
