@@ -1,7 +1,0 @@
-- name: Add the below lines
-  blockinfile:
-    path: /etc/fstab
-    state: present
-    block: |
-      /mnt/swapfile swap swap defaults 0 0
-      /dev/md0 /mnt ext4 defaults,nofail,discard 0 0

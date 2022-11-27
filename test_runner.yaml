@@ -1,7 +1,0 @@
----
-- name: "playbook runner"
-  hosts: localhost
-  connection: local
-  tasks:
-    - name: var checks
-      ansible.builtin.import_tasks: var_check.yaml

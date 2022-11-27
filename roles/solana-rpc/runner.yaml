@@ -1,6 +1,0 @@
----
-- name: "playbook runner"
-  hosts: localhost
-  connection: local
-  roles:
-    - role: "./"
