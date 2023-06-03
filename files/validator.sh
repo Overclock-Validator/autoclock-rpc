@@ -29,6 +29,7 @@ exec /mnt/solana/target/release/solana-validator \
 --rpc-send-service-max-retries 3 \
 --rpc-send-retry-ms 2000 \
 --full-rpc-api \
+--enable-accounts-disk-index \
 --accounts-index-memory-limit-mb 350 \
 --account-index-exclude-key kinXdEcpDQeHPEuQnqmUgtYykqKGVFq6CeVX5iAHJq6 \
 --tpu-use-quic \
