@@ -18,7 +18,6 @@ exec /mnt/solana/target/release/solana-validator \
 --enable-cpi-and-log-storage \
 --account-index program-id \
 --enable-rpc-transaction-history \
---no-duplicate-instance-check \
 --wal-recovery-mode skip_any_corrupted_record \
 --log /mnt/logs/solana-validator.log \
 --accounts /mnt/solana-accounts \
