@@ -23,7 +23,6 @@ exec /mnt/solana/target/release/solana-validator \
 --accounts /mnt/solana-accounts \
 --ledger /mnt/solana-ledger \
 --snapshots /mnt/solana-snapshots \
---no-snapshot-fetch \
 --limit-ledger-size 400000000 \
 --rpc-send-default-max-retries 3 \
 --rpc-send-service-max-retries 3 \
