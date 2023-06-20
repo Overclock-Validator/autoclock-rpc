@@ -18,18 +18,17 @@ exec /mnt/solana/target/release/solana-validator \
 --enable-cpi-and-log-storage \
 --account-index program-id \
 --enable-rpc-transaction-history \
---no-duplicate-instance-check \
 --wal-recovery-mode skip_any_corrupted_record \
 --log /mnt/logs/solana-validator.log \
 --accounts /mnt/solana-accounts \
 --ledger /mnt/solana-ledger \
 --snapshots /mnt/solana-snapshots \
---no-snapshot-fetch \
 --limit-ledger-size 400000000 \
 --rpc-send-default-max-retries 3 \
 --rpc-send-service-max-retries 3 \
 --rpc-send-retry-ms 2000 \
 --full-rpc-api \
+--enable-accounts-disk-index \
 --accounts-index-memory-limit-mb 350 \
 --account-index-exclude-key kinXdEcpDQeHPEuQnqmUgtYykqKGVFq6CeVX5iAHJq6 \
 --tpu-use-quic \
